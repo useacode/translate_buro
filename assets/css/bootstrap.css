@@ -7678,7 +7678,7 @@ body {
 }
 .time {
   padding-top: 70px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   background-color: #3bac95;
   position: relative;
   color: #fff;
@@ -7686,6 +7686,7 @@ body {
 @media screen and (max-width: 480px) {
   .time {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 .time-block {
@@ -7741,8 +7742,8 @@ body {
 .clock {
   float: right;
   position: absolute;
-  bottom: 2px;
-  right: 277px;
+  bottom: 30px;
+  right: 20%;
 }
 .clock img {
   width: 99px;
@@ -7755,8 +7756,8 @@ body {
 }
 @media screen and (max-width: 1100px) {
   .clock {
-    bottom: 26px;
-    right: 277px;
+    bottom: 55px;
+    right: 200px;
   }
   .clock img {
     width: 50px;
@@ -7767,6 +7768,131 @@ body {
   .clock {
     bottom: 26px;
     right: 30px;
+  }
+}
+.easy {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 610px) {
+  .easy .section-caption {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .easy {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+.easy-block {
+  position: relative;
+  margin-top: 50px;
+}
+.easy-block .item-left {
+  position: relative;
+  left: -90px;
+}
+.easy-block .item-right {
+  position: relative;
+  left: 90px;
+}
+@media screen and (max-width: 1200px) {
+  .easy-block .item-left {
+    left: -50px;
+  }
+  .easy-block .item-right {
+    left: 43px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .easy-block .item-left {
+    position: static;
+  }
+  .easy-block .item-right {
+    position: static;
+  }
+}
+@media screen and (max-width: 480px) {
+  .easy-block {
+    margin: 0;
+  }
+}
+.easy-bg {
+  position: absolute;
+  left: 32%;
+  top: 250px;
+  width: 425px;
+  height: 425px;
+}
+@media screen and (max-width: 1200px) {
+  .easy-bg {
+    left: 35%;
+    width: 280px;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .easy-bg {
+    display: none;
+  }
+}
+.easy-item {
+  margin-bottom: 40px;
+}
+.easy-item .separate-line {
+  width: 100px;
+}
+.easy-item .name {
+  font-size: 24px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+.easy-item img {
+  width: 170px;
+  height: 170px;
+}
+.easy-item .details {
+  font-size: 16px;
+  max-width: 350px;
+  margin: 10px auto 0;
+}
+@media screen and (max-width: 1200px) {
+  .easy-item .name {
+    font-size: 20px;
+  }
+  .easy-item img {
+    width: 110px;
+    height: 110px;
+  }
+  .easy-item .details {
+    max-width: 285px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .easy-item .name {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .easy-item img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .easy-item {
+    margin: 30px auto;
+  }
+  .easy-item img {
+    width: 100px;
+    height: 100px;
+  }
+  .easy-item .name {
+    font-size: 16px;
+  }
+  .easy-item .details {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
