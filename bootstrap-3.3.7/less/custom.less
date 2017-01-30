@@ -968,3 +968,57 @@ body{
         }
     }
 }
+
+.get{
+    background: url(../img/get-bg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 0 auto; 
+    width: 100%; 
+    color: #fff;   
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+.get-block{
+    margin-top: 50px;
+    
+    .main-form{
+        background-color: #fff;
+        color: #494949;
+    }
+    
+    .form-caption{
+        color: #236983;
+    }
+    
+    .form-attach{
+        color: #236983;
+    }
+    
+    input{
+        border-color: #c6c6c6;
+        &::-webkit-input-placeholder { color: #c6c6c6; }
+        &:-moz-placeholder { color: #c6c6c6; }
+        &::-moz-placeholder { color: #c6c6c6; }
+        &:-ms-input-placeholder { color: #c6c6c6; }
+        
+        @media screen and (max-width: @screen-phone){
+            height: 35px;
+        }
+    }
+    
+     .btn-get{
+        color: #fff;
+        
+        &:hover{
+            background-color: #236983;
+            color: #fff;
+        }            
+    }
+    
+    .politics{
+        color: #494949;
+    }
+}

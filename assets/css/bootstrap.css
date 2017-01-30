@@ -7895,4 +7895,58 @@ body {
     font-size: 14px;
   }
 }
+.get {
+  background: url(../img/get-bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 75px;
+}
+.get-block {
+  margin-top: 50px;
+}
+.get-block .main-form {
+  background-color: #fff;
+  color: #494949;
+}
+.get-block .form-caption {
+  color: #236983;
+}
+.get-block .form-attach {
+  color: #236983;
+}
+.get-block input {
+  border-color: #c6c6c6;
+}
+.get-block input::-webkit-input-placeholder {
+  color: #c6c6c6;
+}
+.get-block input:-moz-placeholder {
+  color: #c6c6c6;
+}
+.get-block input::-moz-placeholder {
+  color: #c6c6c6;
+}
+.get-block input:-ms-input-placeholder {
+  color: #c6c6c6;
+}
+@media screen and (max-width: 480px) {
+  .get-block input {
+    height: 35px;
+  }
+}
+.get-block .btn-get {
+  color: #fff;
+}
+.get-block .btn-get:hover {
+  background-color: #236983;
+  color: #fff;
+}
+.get-block .politics {
+  color: #494949;
+}
 /*# sourceMappingURL=bootstrap.css.map */
