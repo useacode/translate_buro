@@ -21,6 +21,12 @@ body{
     margin: 0;
 }
 
+.mobile-hide{
+    @media (max-width: @screen-phone){
+        display: none;
+    }
+}
+
 #first{ 
 	background: url(../img/bg_first.jpg);
     background-position: top;
@@ -571,6 +577,11 @@ body{
         font-size: 18px;
     }
     
+    @media screen and (max-width: 768px){
+        .language{
+            margin: 30px 0;
+        }
+    }
     @media screen and (max-width: @screen-phone){       
         margin: auto;
         img{
@@ -720,5 +731,98 @@ body{
         .details{
             font-size: 14px;
         }
+    }
+}
+
+.time{
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: #3bac95;
+    position: relative;
+    color: #fff;
+    
+    @media screen and (max-width: @screen-phone){ 
+        padding-top: 50px;
+    }
+}
+
+.time-block{
+    display: table;
+    margin: auto;
+    border: 2px solid white;
+    padding: 0 50px 30px;
+    
+    @media screen and (max-width: @screen-phone){ 
+        border: none;
+        padding: 0 0 30px;
+    }
+}
+
+
+.time-caption{
+    position: relative;
+    top: -26px;
+    background-color: #3bac95;
+    padding: 0 10px;
+    
+    @media screen and (max-width: 669px){
+        font-size: 30px;
+    }
+    
+    @media screen and (max-width: @screen-phone){ 
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+.time-description{
+    font-size: 18px;
+    text-align: center;   
+    
+    @media screen and (max-width: @screen-phone){ 
+        font-size: 18px;
+    }
+}
+
+.white-line{
+    display: block;
+    margin: 15px auto;
+    width: 400px;
+    height:2px;
+    background-color: #fff;
+    
+    @media screen and (max-width: @screen-phone){ 
+        width: 200px;
+    }
+}
+
+.clock{
+    float: right;
+    position: absolute;
+    bottom: 2px;
+    right: 277px;
+    
+    img{
+        width: 99px;
+        height: 115px;
+    }
+    
+    @media screen and (max-width: 1200px){ 
+        right: 200px;
+    }
+    
+    @media screen and (max-width: 1100px){ 
+        bottom: 26px;
+        right: 277px;
+        
+        img{
+            width: 50px;
+            height: 58px;
+        }
+    }
+    
+    @media screen and (max-width: @screen-phone){ 
+        bottom: 26px;
+        right: 30px;
     }
 }
