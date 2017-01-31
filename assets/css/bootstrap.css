@@ -7904,13 +7904,29 @@ body {
   width: 100%;
   color: #fff;
   padding-top: 50px;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .get .section-caption {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .get {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 .get-block {
   width: 80%;
   display: table;
   margin: 50px auto 0;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .get-block {
+    margin: 25px auto 0;
+  }
 }
 .get-block .main-form {
   background-color: #fff;
@@ -7960,6 +7976,9 @@ body {
 .steps li {
   margin-bottom: 45px;
 }
+.steps li:last-child {
+  margin-bottom: 0;
+}
 .steps li:before {
   content: '1';
   font-size: 90px;
@@ -7987,8 +8006,57 @@ body {
   content: '4';
   top: 343px;
 }
+@media screen and (max-width: 1200px) {
+  .steps li:before {
+    left: 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .steps li:before {
+    left: 100px;
+  }
+}
+@media screen and (max-width: 662px) {
+  .steps li:before {
+    left: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .steps .step {
+    font-size: 22px;
+    margin-left: 90px;
+  }
+  .steps .do {
+    font-size: 14px;
+    margin-left: 90px;
+  }
+  .steps li:before {
+    font-size: 80px;
+    left: 47px;
+  }
+}
 .step-line {
   position: absolute;
   top: 25px;
+}
+@media screen and (max-width: 1200px) {
+  .step-line {
+    left: -30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .step-line {
+    left: 60px;
+  }
+}
+@media screen and (max-width: 662px) {
+  .step-line {
+    left: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .step-line {
+    left: 15px;
+  }
 }
 /*# sourceMappingURL=bootstrap.css.map */
