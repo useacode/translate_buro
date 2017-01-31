@@ -7203,60 +7203,70 @@ body {
   background-size: contain;
   display: table;
   margin: 65px auto 0;
-  font-size: 36px;
   text-transform: uppercase;
   padding: 40px;
+}
+.main-caption h1 {
+  font-size: 36px;
 }
 .main-caption:after {
   display: table;
   content: 'документы, инструкции, статьи, письма и многое другое';
   font-size: 18px;
   position: relative;
-  top: 29px;
+  top: 20px;
   left: 356px;
 }
 @media screen and (max-width: 1200px) {
   .main-caption {
-    font-size: 32px;
     margin: 30px auto;
+  }
+  .main-caption h1 {
+    font-size: 32px;
   }
   .main-caption:after {
     font-size: 16px;
-    top: 27px;
+    top: 17px;
     left: 318px;
   }
 }
 @media screen and (max-width: 992px) {
   .main-caption {
-    font-size: 23px;
     margin: 0 auto;
+  }
+  .main-caption h1 {
+    font-size: 23px;
   }
   .main-caption:after {
     font-size: 12px;
-    top: 20px;
+    top: 10px;
     left: 225px;
   }
 }
 @media screen and (max-width: 708px) {
   .main-caption {
-    font-size: 16px;
     margin: 0 auto;
+  }
+  .main-caption h1 {
+    font-size: 16px;
   }
   .main-caption:after {
     font-size: 8px;
-    top: 15px;
+    top: 2px;
     left: 164px;
   }
 }
 @media screen and (max-width: 526px) {
   .main-caption {
     background: none;
-    font-size: 20px;
     border: none;
     text-align: center;
     margin: 20px 0 0;
     padding: 0;
     text-transform: inherit;
+  }
+  .main-caption h1 {
+    font-size: 20px;
   }
   .main-caption:after {
     position: static;
@@ -7510,13 +7520,17 @@ body {
 .section-caption {
   display: table;
   margin: auto;
-  font-size: 36px;
   text-transform: uppercase;
+}
+.section-caption h2 {
+  font-size: 36px;
 }
 @media screen and (max-width: 480px) {
   .section-caption {
-    font-size: 24px;
     text-align: center;
+  }
+  .section-caption h2 {
+    font-size: 24px;
   }
 }
 .lang-block {
@@ -7593,7 +7607,7 @@ body {
   padding-bottom: 75px;
 }
 @media screen and (max-width: 669px) {
-  .full-languages .section-caption {
+  .full-languages .section-caption h2 {
     font-size: 27px;
   }
 }
@@ -7601,7 +7615,7 @@ body {
   .full-languages {
     padding-top: 25px;
   }
-  .full-languages .section-caption {
+  .full-languages .section-caption h2 {
     font-size: 17px;
   }
 }
@@ -7704,19 +7718,21 @@ body {
 }
 .time-caption {
   position: relative;
-  top: -26px;
+  top: -40px;
   background-color: #3bac95;
   padding: 0 10px;
 }
 @media screen and (max-width: 669px) {
-  .time-caption {
+  .time-caption h2 {
     font-size: 30px;
   }
 }
 @media screen and (max-width: 480px) {
   .time-caption {
-    font-size: 22px;
     text-align: center;
+  }
+  .time-caption h2 {
+    font-size: 22px;
   }
 }
 .time-description {
@@ -8063,12 +8079,11 @@ body {
 .comment {
   background-color: #d8eeea;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 @media screen and (max-width: 480px) {
   .comment {
     padding-top: 25px;
-    padding-bottom: 25px;
   }
 }
 .feedbacks-block {
@@ -8110,5 +8125,157 @@ body {
   .feedback .name {
     font-size: 18px;
   }
+}
+@media screen and (max-width: 787px) {
+  .bx-wrapper .bx-prev {
+    display: none;
+  }
+  .bx-wrapper .bx-next {
+    display: none;
+  }
+}
+.company {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 480px) {
+  .company {
+    padding-top: 60px;
+  }
+  .company .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .company .row > div:first-of-type {
+    order: 1;
+  }
+}
+.company-block {
+  display: table;
+  margin: auto;
+  border: 2px solid #316c85;
+  padding: 0 40px 0;
+  color: #316c85;
+  position: relative;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 480px) {
+  .company-block {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+.company-caption {
+  position: relative;
+  top: -40px;
+  background-color: #fff;
+  padding: 0 10px;
+}
+@media screen and (max-width: 992px) {
+  .company-caption h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 669px) {
+  .company-caption h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .company-caption {
+    text-align: center;
+  }
+  .company-caption h2 {
+    font-size: 22px;
+  }
+}
+.company-description {
+  font-size: 14px;
+  text-align: left;
+  color: #333333;
+  position: relative;
+  top: -35px;
+  line-height: 1.7em;
+}
+@media screen and (max-width: 480px) {
+  .company-description {
+    display: none;
+  }
+}
+.info-item {
+  float: right;
+  position: absolute;
+  bottom: -30px;
+  right: 20%;
+}
+.info-item img {
+  width: 62px;
+  height: 62px;
+}
+@media screen and (max-width: 480px) {
+  .info-item {
+    display: none;
+  }
+}
+.company-owner img {
+  float: left;
+  margin-top: 40px;
+  width: 200px;
+  height: 200px;
+}
+.company-owner .owner-wrap {
+  margin-left: 220px;
+}
+.company-owner .name {
+  font-size: 24px;
+}
+.company-owner .description {
+  font-size: 14px;
+  font-style: italic;
+  color: #918d8d;
+}
+.company-owner .text {
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .company-owner img {
+    width: 150px;
+    height: 150px;
+  }
+  .company-owner .owner-wrap {
+    margin-left: 175px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .company-owner img {
+    float: none;
+    margin: 0;
+    display: table;
+    margin: auto;
+  }
+  .company-owner .owner-wrap {
+    margin: 10px 0 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .facts {
+    margin-top: -30px;
+    margin-bottom: 20px;
+  }
+}
+.facts-caption {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.fact {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+.fact:before {
+  content: url(../img/check.png);
+  position: absolute;
+  left: 10px;
 }
 /*# sourceMappingURL=bootstrap.css.map */
