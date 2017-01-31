@@ -8331,10 +8331,51 @@ body {
     width: 80%;
   }
 }
+.contacts-block .main-form {
+  background-color: #fff;
+  border: 1px solid #236983;
+  color: #494949;
+}
+.contacts-block .form-caption {
+  color: #236983;
+}
+.contacts-block .form-attach {
+  color: #236983;
+}
+.contacts-block input {
+  border-color: #c6c6c6;
+}
+.contacts-block input::-webkit-input-placeholder {
+  color: #c6c6c6;
+}
+.contacts-block input:-moz-placeholder {
+  color: #c6c6c6;
+}
+.contacts-block input::-moz-placeholder {
+  color: #c6c6c6;
+}
+.contacts-block input:-ms-input-placeholder {
+  color: #c6c6c6;
+}
+@media screen and (max-width: 480px) {
+  .contacts-block input {
+    height: 35px;
+  }
+}
+.contacts-block .btn-get {
+  color: #fff;
+}
+.contacts-block .btn-get:hover {
+  background-color: #236983;
+  color: #fff;
+}
+.contacts-block .politics {
+  color: #494949;
+}
 .get-free-bottom {
   position: absolute;
   left: -524px;
-  bottom: 35px;
+  bottom: 40px;
 }
 .get-free-bottom:after {
   content: url(../img/arrow-blue-right.png);

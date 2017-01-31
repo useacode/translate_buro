@@ -1267,7 +1267,6 @@ body{
     }
 }
 
-
 .company-caption{
     position: relative;
     top: -40px;
@@ -1454,13 +1453,52 @@ body{
     @media screen and (max-width: 1024px){
         width: 80%;
     }
+    
+    .main-form{
+        background-color: #fff;
+        border: 1px solid #236983;
+        color: #494949;
+    }
+    
+    .form-caption{
+        color: #236983;
+    }
+    
+    .form-attach{
+        color: #236983;
+    }
+    
+    input{
+        border-color: #c6c6c6;
+        &::-webkit-input-placeholder { color: #c6c6c6; }
+        &:-moz-placeholder { color: #c6c6c6; }
+        &::-moz-placeholder { color: #c6c6c6; }
+        &:-ms-input-placeholder { color: #c6c6c6; }
+        
+        @media screen and (max-width: @screen-phone){
+            height: 35px;
+        }
+    }
+    
+     .btn-get{
+        color: #fff;
+        
+        &:hover{
+            background-color: #236983;
+            color: #fff;
+        }            
+    }
+    
+    .politics{
+        color: #494949;
+    }
 
 }
 
 .get-free-bottom{
     position: absolute;
     left: -524px;
-    bottom: 35px;
+    bottom: 40px;
     
     &:after{
         content: url(../img/arrow-blue-right.png);
