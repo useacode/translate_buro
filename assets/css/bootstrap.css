@@ -7334,10 +7334,7 @@ body {
   }
 }
 .separate-line {
-  background: url(../img/line.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #ef6d34;
   width: 172px;
   height: 1px;
   margin: auto;
@@ -8277,5 +8274,43 @@ body {
   content: url(../img/check.png);
   position: absolute;
   left: 10px;
+}
+.more {
+  background: url(../img/more-bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 480px) {
+  .more {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+.more-block {
+  margin-top: 50px;
+}
+.more-block .separate-line {
+  background-color: #fff;
+}
+@media screen and (max-width: 480px) {
+  .more-block {
+    margin-top: 25px;
+  }
+}
+.first-line {
+  display: table;
+  margin: auto;
+  width: 80%;
+}
+.second-line {
+  display: table;
+  margin: auto;
+  width: 60%;
 }
 /*# sourceMappingURL=bootstrap.css.map */
