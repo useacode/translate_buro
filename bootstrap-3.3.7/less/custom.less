@@ -1436,3 +1436,100 @@ body{
     margin: auto;
     width: 60%;
 }
+
+#contacts{
+    padding: 50px 0;
+    
+    @media screen and (max-width: @screen-phone){
+        padding: 25px 0;
+    }
+}
+
+.contacts-block{
+    
+    width: 70%;
+    margin: 30px auto 0;
+    position: relative;
+    
+    @media screen and (max-width: 1024px){
+        width: 80%;
+    }
+
+}
+
+.get-free-bottom{
+    position: absolute;
+    left: -524px;
+    bottom: 35px;
+    
+    &:after{
+        content: url(../img/arrow-blue-right.png);
+        position: relative;
+        top: 16px;
+        left: 4px;
+    }
+    
+    @media screen and (max-width: 1200px){
+       left: -610px; 
+    }
+    
+    @media screen and (max-width: 992px){
+        display: none;
+    }
+}
+
+.contacts-list{
+    display: table;
+    margin: 20% auto 0;
+    font-size: 30px;
+    color: #333333;
+    
+    .text{
+        font-size: 18px;
+        color: #959595;
+    }
+    
+    .phone{
+        margin-bottom: 50px;
+        a{
+            color: #333333;
+            text-decoration: none;
+        }
+        position: relative;
+    }
+    
+    .phone:before{
+        content: url(../img/phone.png);
+        position: absolute;
+        left: -90px;
+        top: -9px;
+    }
+    
+    .email{
+        position: relative;
+    }
+    .email:before{
+        content: url(../img/email.png);
+        position: absolute;
+        left: -90px;
+        top: -9px;
+    }
+    
+    @media screen and (max-width: 992px){
+        margin: 0 auto 20px;
+    }
+    
+    @media screen and (max-width: @screen-phone){
+        font-size: 22px;
+        
+        .phone:before{
+            content: '';
+        }
+        .email:before{
+            content: '';
+        }
+        .text{
+            font-size: 15px;
+        }
+    }
+}
