@@ -571,7 +571,7 @@ body{
         font-size: 36px;
     }
     
-    @media screen and (max-width: @screen-phone){
+    @media screen and (max-width: 600px){
         h2{
             font-size: 24px;
         }
@@ -1422,7 +1422,7 @@ body{
     }
     
     @media screen and (max-width: @screen-phone){
-        margin-top: 25px;
+        margin-top: 0;
     }
 }
 .first-line{
@@ -1568,6 +1568,71 @@ body{
         }
         .text{
             font-size: 15px;
+        }
+    }
+}
+
+footer{
+    background-color: #494949;
+    color: #fff;
+    padding: 20px 0;
+    
+    @media screen and (max-width: @screen-phone){ 
+        
+        .row {
+            display: flex;
+            flex-direction: column;
+        }
+        .row > div:nth-child(1) {
+            order: 2;
+        }
+        .row > div:nth-child(2) {
+            order: 3;
+        }
+        .row > div:nth-child(3) {
+            order: 1;
+        }
+    }
+    
+    .who{
+        margin-top: 10px;
+    }
+    p{
+        margin: 0 0 3px;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .call{
+        @media (max-width: 767px){
+            display: table;
+            margin: auto;
+        }
+    }
+    
+    .logo{
+        @media screen and (max-width: 992px){
+            background: url(../img/logo.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 204px;
+            height: 71px;
+            margin: 0 auto 15px;
+        }
+    }
+
+    .number{
+        @media (max-width: @screen-phone){
+            display: none;
+        }
+    }
+
+    .enroll{
+        @media screen and (max-width: @screen-phone){
+            display: block;
+            margin-bottom: 15px;
+            font-size: 18px;
         }
     }
 }

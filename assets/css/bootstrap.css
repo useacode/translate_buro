@@ -7522,7 +7522,7 @@ body {
 .section-caption h2 {
   font-size: 36px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .section-caption {
     text-align: center;
   }
@@ -8300,7 +8300,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .more-block {
-    margin-top: 25px;
+    margin-top: 0;
   }
 }
 .first-line {
@@ -8443,6 +8443,63 @@ body {
   }
   .contacts-list .text {
     font-size: 15px;
+  }
+}
+footer {
+  background-color: #494949;
+  color: #fff;
+  padding: 20px 0;
+}
+@media screen and (max-width: 480px) {
+  footer .row {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .row > div:nth-child(1) {
+    order: 2;
+  }
+  footer .row > div:nth-child(2) {
+    order: 3;
+  }
+  footer .row > div:nth-child(3) {
+    order: 1;
+  }
+}
+footer .who {
+  margin-top: 10px;
+}
+footer p {
+  margin: 0 0 3px;
+  font-size: 14px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  footer .call {
+    display: table;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 992px) {
+  footer .logo {
+    background: url(../img/logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 204px;
+    height: 71px;
+    margin: 0 auto 15px;
+  }
+}
+@media (max-width: 480px) {
+  footer .number {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer .enroll {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
