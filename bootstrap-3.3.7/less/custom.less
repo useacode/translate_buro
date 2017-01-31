@@ -557,6 +557,7 @@ body{
     
     @media screen and (max-width: @screen-phone){
         font-size: 24px;
+        text-align: center;
     }
 }
 
@@ -1136,5 +1137,69 @@ body{
     
     @media screen and (max-width: @screen-phone){
         left: 15px;
+    }
+}
+
+.comment{
+    background-color: #d8eeea;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    @media screen and (max-width: @screen-phone){
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+.feedbacks-block{
+    margin-top: 50px;
+    
+    @media screen and (max-width: @screen-phone){
+        margin-top: 25px;
+    }
+}
+
+.feedback{
+    font-size: 14px;
+    
+    img{
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+    }
+    
+    .feedback-wrap{
+        margin-left: 111px;
+    }
+    
+    .name{
+        font-size: 24px;
+        margin-bottom: 7px;
+    }
+    
+    .date{
+        
+    }
+    
+    .text{
+        max-width: 450px;
+        margin-top: 7px;
+    }
+    
+    @media screen and (max-width: @screen-phone){
+        
+        img{
+            width: 70px;
+            height: 70px;
+        }
+        
+        .feedback-wrap{
+            margin-left: 90px;
+        }
+        
+        .name{
+            font-size: 18px;
+        }
     }
 }

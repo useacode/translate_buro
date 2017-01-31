@@ -7516,6 +7516,7 @@ body {
 @media screen and (max-width: 480px) {
   .section-caption {
     font-size: 24px;
+    text-align: center;
   }
 }
 .lang-block {
@@ -8057,6 +8058,57 @@ body {
 @media screen and (max-width: 480px) {
   .step-line {
     left: 15px;
+  }
+}
+.comment {
+  background-color: #d8eeea;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 480px) {
+  .comment {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+.feedbacks-block {
+  margin-top: 50px;
+}
+@media screen and (max-width: 480px) {
+  .feedbacks-block {
+    margin-top: 25px;
+  }
+}
+.feedback {
+  font-size: 14px;
+}
+.feedback img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+.feedback .feedback-wrap {
+  margin-left: 111px;
+}
+.feedback .name {
+  font-size: 24px;
+  margin-bottom: 7px;
+}
+.feedback .text {
+  max-width: 450px;
+  margin-top: 7px;
+}
+@media screen and (max-width: 480px) {
+  .feedback img {
+    width: 70px;
+    height: 70px;
+  }
+  .feedback .feedback-wrap {
+    margin-left: 90px;
+  }
+  .feedback .name {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */

@@ -5,8 +5,12 @@
     <title>Бюро умных переводов</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/jquery.scrollbar.css">
+    <link rel="stylesheet" href="assets/css/jquery.bxslider.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script> 
     <script src="assets/js/bootstrap.min.js"></script> 
+    <script src="assets/js/jquery.bxslider.min.js"></script> 
+    <script src="assets/js/jquery.scrollbar.min.js"></script>
 </head>
 <body>
     <div class="wrapper scrollbar-dynamic">
@@ -346,49 +350,100 @@
                 </div>
            </div>
         </section>
+        <section id="feedbacks" class="comment">
+           <div class="container">
+               <div class="section-caption">Отзывы наших клиентов</div>
+               <div class="feedbacks-block">
+                   <ul class="bxslider">
+                        <li>
+                            <div class="feedback">
+                                <img src="assets/img/feedback1.png" alt="">
+                                <div class="feedback-wrap">
+                                    <div class="name">Константин Самыйпридирчивый</div>
+                                    <div class="date">01.10.2016 | Москва</div>
+                                    <div class="text">Я всегда ко всем и ко всему придираюсь, но здесь
+                                        не к чему было придраться и поэтому я даже 
+                                        неожиданно для самого себя остался доволен  
+                                        переводом очень важной научной статьи, которая 
+                                        мне нужна. Спасибо.</div>
+                                </div>              
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feedback">
+                                <img src="assets/img/feedback2.png" alt="">
+                                <div class="feedback-wrap">
+                                    <div class="name">Анастасия Оченьвнимательная</div>
+                                    <div class="date">30.09.2016 | Санкт-Петербург</div>
+                                    <div class="text">Долго изучала перевод, перечитывала 10 раз, но так и 
+                                        не смогла найти ни одной ошибки или неточной 
+                                        формулировки или фрагмента, который бы у меня самой 
+                                        вызвал сомнение. Благодарю за идеальную работу.</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feedback">
+                                <img src="assets/img/feedback1.png" alt="">
+                                <div class="feedback-wrap">
+                                    <div class="name">Константин Самыйпридирчивый</div>
+                                    <div class="date">01.10.2016 | Москва</div>
+                                    <div class="text">Я всегда ко всем и ко всему придираюсь, но здесь
+                                        не к чему было придраться и поэтому я даже 
+                                        неожиданно для самого себя остался доволен  
+                                        переводом очень важной научной статьи, которая 
+                                        мне нужна. Спасибо.</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+               </div>
+           </div>
+        </section>
         <footer id="contacts">
 
         </footer>
     </div>
-
-    <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-</div>
-    <link rel="stylesheet" href="assets/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="assets/css/jquery.scrollbar.css">
-
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery.scrollbar.min.js"></script>
+   
     <script>
         $(document).ready(function(){
             $(".wrapper").scrollbar();
             if($("#first").height() < $(window).height()){
                 $("#first").height($(window).height());
             }
+            
+            var slider = $(".bxslider").bxSlider({
+            controls: true,
+            adaptiveHeight: true,
+            minSlides: 1,
+            maxSlides: 2,
+            slideWidth: 520,
+            slideMargin: 20,
+            auto: false,
+            });
         })
     </script>
-    <script src="assets/js/blueimp-gallery.min.js"></script>
     <script>
-        $('#photo').click(function (event) {
-            event = event || window.event;
-            var target = event.target || event.srcElement,
-                link = target.src ? target.parentNode : target,
-                options = {index: link, event: event},
-                links = $('a', $(this));
-            blueimp.Gallery(links, options);
+	   $(function(){
+           
+        $(window).on("scroll", function(){
+            $(".navbar-collapse.in").removeClass("in");
         });
+
+        $("body > *").on("click", function(e){
+
+            if(!$(e.target).closest(".navbar-collapse")[0]){
+                $(".navbar-collapse.in").removeClass("in");
+            }
+
+        });
+	});
+    </script>
+    <script>
 
         $('a[href^="#"]').on("click", function(e){
             e.preventDefault();
             var o = $($(this).attr("href"));
-            //alert(o.offset());
             $(".scrollbar-dynamic").stop().animate({scrollTop:o.offset().top}, '500', 'swing');
         });
 
