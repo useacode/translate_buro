@@ -960,7 +960,7 @@ body{
         }
         
         .name{
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .details{
@@ -978,11 +978,14 @@ body{
     width: 100%; 
     color: #fff;   
     padding-top: 50px;
-    padding-bottom: 75px;
+    padding-bottom: 25px;
 }
 
 .get-block{
-    margin-top: 50px;
+    width: 80%;
+    display: table;
+    margin: 50px auto 0;
+    position: relative;
     
     .main-form{
         background-color: #fff;
@@ -1021,4 +1024,48 @@ body{
     .politics{
         color: #494949;
     }
+}
+
+.steps{
+    display: table;
+    text-align: left;
+    margin: auto;
+    
+    li{
+        margin-bottom: 45px;
+    }
+    
+    li:before{
+        content: '1';
+        font-size: 90px;
+        position: absolute;
+        left: 50px;
+    }
+    
+    .step{
+        font-size: 24px;
+    }
+    .do{
+        font-size: 16px;
+    }
+    .one:before{
+        top: -26px;
+    }
+    .two:before{
+        content: '2';
+        top: 97px;
+    }
+    .three:before{
+        content: '3';
+        top: 220px;
+    }
+    .four:before{
+        content: '4';
+        top: 343px;
+    }
+}
+
+.step-line{
+    position: absolute;
+    top: 25px;
 }

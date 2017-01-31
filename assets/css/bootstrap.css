@@ -7889,7 +7889,7 @@ body {
     height: 100px;
   }
   .easy-item .name {
-    font-size: 16px;
+    font-size: 15px;
   }
   .easy-item .details {
     font-size: 14px;
@@ -7904,10 +7904,13 @@ body {
   width: 100%;
   color: #fff;
   padding-top: 50px;
-  padding-bottom: 75px;
+  padding-bottom: 25px;
 }
 .get-block {
-  margin-top: 50px;
+  width: 80%;
+  display: table;
+  margin: 50px auto 0;
+  position: relative;
 }
 .get-block .main-form {
   background-color: #fff;
@@ -7948,5 +7951,44 @@ body {
 }
 .get-block .politics {
   color: #494949;
+}
+.steps {
+  display: table;
+  text-align: left;
+  margin: auto;
+}
+.steps li {
+  margin-bottom: 45px;
+}
+.steps li:before {
+  content: '1';
+  font-size: 90px;
+  position: absolute;
+  left: 50px;
+}
+.steps .step {
+  font-size: 24px;
+}
+.steps .do {
+  font-size: 16px;
+}
+.steps .one:before {
+  top: -26px;
+}
+.steps .two:before {
+  content: '2';
+  top: 97px;
+}
+.steps .three:before {
+  content: '3';
+  top: 220px;
+}
+.steps .four:before {
+  content: '4';
+  top: 343px;
+}
+.step-line {
+  position: absolute;
+  top: 25px;
 }
 /*# sourceMappingURL=bootstrap.css.map */
