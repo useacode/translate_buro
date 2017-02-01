@@ -91,9 +91,9 @@
                                     <div class="form-description">
                                         и получите бесплатный тестовый перевод 1 страницы
                                     </div>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Ваше имя*">
-                                    <input type="text" class="form-control" id="inputEmail" placeholder="E-mail*">
-                                    <input type="text" class="form-control" id="inputPhone" placeholder="Телефон*">
+                                    <input type="text" class="form-control" id="inputName2" placeholder="Ваше имя*">
+                                    <input type="text" class="form-control" id="inputEmail2" placeholder="E-mail*">
+                                    <input type="text" class="form-control" id="inputPhone2" placeholder="Телефон*">
                                     <div class="form-attach">
                                        <a href=""><img src="assets/img/file.png" alt=""></a>
                                        <p>прикрепите документ для перевода</p>
@@ -334,9 +334,9 @@
                                     <div class="form-description">
                                         и получите бесплатный тестовый перевод 1 страницы
                                     </div>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Ваше имя*">
-                                    <input type="text" class="form-control" id="inputEmail" placeholder="E-mail*">
-                                    <input type="text" class="form-control" id="inputPhone" placeholder="Телефон*">
+                                    <input type="text" class="form-control" id="inputName3" placeholder="Ваше имя*">
+                                    <input type="text" class="form-control" id="inputEmail3" placeholder="E-mail*">
+                                    <input type="text" class="form-control" id="inputPhone3" placeholder="Телефон*">
                                     <div class="form-attach">
                                        <a href=""><img src="assets/img/file-blue.png" alt=""></a>
                                        <p>прикрепите документ для перевода</p>
@@ -517,9 +517,9 @@
                                 <div class="form-description">
                                     и получите бесплатный тестовый перевод 1 страницы
                                 </div>
-                                <input type="text" class="form-control" id="inputName" placeholder="Ваше имя*">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="E-mail*">
-                                <input type="text" class="form-control" id="inputPhone" placeholder="Телефон*">
+                                <input type="text" class="form-control" id="inputName4" placeholder="Ваше имя*">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="E-mail*">
+                                <input type="text" class="form-control" id="inputPhone4" placeholder="Телефон*">
                                 <div class="form-attach">
                                    <a href=""><img src="assets/img/file-blue.png" alt=""></a>
                                    <p>прикрепите документ для перевода</p>
@@ -564,6 +564,11 @@
             <img src="assets/img/totop.png">
         </a>
         <div class="main-popup main-form">
+            <style scoped>
+                .error{
+                    color: red;
+                }
+            </style>
             <div class="button_close" data-popup>х</div>
             <div class="caption">
                 Заполните форму
@@ -571,12 +576,14 @@
             <div class="separate-line"></div>
             <p>и мы Вам перезвоним</p>
             <input type="text" class="form-control" id="inputName" placeholder="Ваше имя*">
+            <div class="error error--name"></div>
             <input type="text" class="form-control" id="inputPhone" placeholder="Телефон*">
-            <div class="btn btn-get">Жду звонка!</div>
+            <div class="error error--phone"></div>
+            <div class="btn btn-get" data-send>Жду звонка!</div>
             <a href="" class="politics">Политика конфиденциальности</a>
         </div>
         <div class="success_popup main-popup">
-            <div class="button_close" data-popup>x</div>
+            <div class="button_close" data-popup-success>x</div>
             <div class="caption">Спасибо!</div>
             <div class="separate-line"></div>
             <p>Мы перезвоним Вам<br> в самое ближайшее время</p>
@@ -585,63 +592,28 @@
     </div>
    
     <script>
-        $(document).ready(function(){
-            $(".wrapper").scrollbar();
-            if($("#first").height() < $(window).height()){
-                $("#first").height($(window).height());
-            }
-            
-            var slider = $(".bxslider").bxSlider({
-            controls: true,
-            adaptiveHeight: true,
-            minSlides: 1,
-            maxSlides: 2,
-            slideWidth: 520,
-            slideMargin: 20,
-            auto: false,
-            });
-        })
-    </script>
-    <script>
 
-        $('a[href^="#"]').on("click", function(e){
-            e.preventDefault();
-            var o = $($(this).attr("href"));
-            $(".scrollbar-dynamic").stop().animate({scrollTop:o.offset().top}, '500', 'swing');
-        });
-
-        $("[data-popup]").on("click", function(){
-            $(".main_popup").toggle();
-        })
-
-        $("body").on("click", function(e){
-            if(!$(e.target).closest(".main_popup, [data-popup]")[0])
-                $(".main_popup").hide();
-        })
-        
-    </script>
-    <script>
 
 	$(function(){
 
 
-        $("[data-popup]").on("touchstart", function(e){
+        $("[data-popup]").on("click", function(e){
             e.stopPropagation();
             e.preventDefault();
             setTimeout(function(){
-                $(".main_popup").toggle();
+                $(".main-popup.main-form").toggle();
             });
         });
 
-        $("[data-popup-success]").on("touchstart", function(e){
+        $("[data-popup-success]").on("click", function(e){
             e.stopPropagation();
             e.preventDefault();
             setTimeout(function(){
-                $(".success_popup").hide();
+                $(".main-popup.success_popup").hide();
             });
         });
 
-        $("[data-send]").on("touchstart", function(e){
+        $("[data-send]").on("click", function(e){
             var succ = true;
             if($("#inputName").val().length < 2) {
                 $(".error--name").text("Имя должно быть не менее 2х букв");
@@ -666,13 +638,13 @@
                 $(".error--phone").text("");
             }
             if(succ) {
-                $.post("/api/order", {
+                /*$.post("/api/order", {
                     date: localStorage.selected || "",
                     name: $("#inputName").val(),
                     phone: $("#inputPhone").val()
                 }, function(data){
-                    if(data == "1"){
-                        $(".main_popup").hide();
+                    if(data == "1"){*/
+                        $(".main-popup.main-form").hide();
                         $(".success_popup").show();
                         $("#inputName, #inputPhone").val('');
                         $(".error").text("");
@@ -680,19 +652,19 @@
                         setTimeout(function(){
                             $(".success_popup").hide();
                         }, 2300);
-                    }
+                    /*}
                     else{
                         $(".error").text("");
                         $(".error--name").text("Ошибка");
                     }
-                })
+                })*/
                 
             }
         });
 
-        $("body").on("touchstart", function(e){
-            if($(".main_popup").css("display") != "none" && !$(e.target).closest(".main_popup, [data-popup], [data-send]")[0])
-                $(".main_popup").hide();
+        $("body").on("click", function(e){
+            if($(".main-popup.main-form").css("display") != "none" && !$(e.target).closest(".main-popup.main-form, [data-popup], [data-send]")[0])
+                $(".main-popup.main-form").hide();
             if($(".success_popup").css("display") != "none" && !$(e.target).closest(".success_popup, [data-popup-success], [data-send]")[0])
                 $(".success_popup").hide();
         })
@@ -701,7 +673,7 @@
             $(".navbar-collapse.in").removeClass("in");
         });
 
-        $("body > *").on("touchstart", function(e){
+        $("body > *").on("click", function(e){
             
             if(!$(e.target).closest(".navbar-collapse, .navbar-toggle")[0]){
                 $(".navbar-collapse.in").removeClass("in");
