@@ -7776,6 +7776,11 @@ body {
   width: 99px;
   height: 115px;
 }
+@media screen and (max-width: 1200px) {
+  .clock {
+    right: 12%;
+  }
+}
 @media screen and (max-width: 1100px) {
   .clock {
     bottom: -25px;
@@ -8334,7 +8339,7 @@ body {
   margin: 30px auto 0;
   position: relative;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
   .contacts-block {
     width: 80%;
   }
@@ -8391,7 +8396,7 @@ body {
   top: 16px;
   left: 4px;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1346px) {
   .get-free-bottom {
     left: -400px;
   }
@@ -8399,6 +8404,16 @@ body {
 @media screen and (max-width: 1200px) {
   .get-free-bottom {
     left: -550px;
+  }
+}
+@media screen and (max-width: 1135px) {
+  .get-free-bottom {
+    left: -650px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .get-free-bottom {
+    left: -560px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -8486,6 +8501,11 @@ footer {
 footer .who {
   margin-top: 10px;
 }
+@media screen and (max-width: 992px) {
+  footer .who {
+    margin-top: 15px;
+  }
+}
 footer p {
   margin: 0 0 3px;
   font-size: 14px;
@@ -8498,13 +8518,18 @@ footer p {
   }
 }
 @media screen and (max-width: 992px) {
+  footer .call {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 992px) {
   footer .logo {
     background: url(../img/logo.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 204px;
-    height: 71px;
+    width: 171px;
+    height: 62px;
     margin: 15px auto 15px;
   }
 }
@@ -8547,14 +8572,25 @@ footer p {
   position: fixed;
   background-color: #43747a;
   padding: 30px;
-  top: 60px;
-  left: 50px;
+  width: 377px;
+  height: 377px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
   color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   display: none;
+}
+@media screen and (max-width: 480px) {
+  .main-popup {
+    width: 300px;
+    height: 300px;
+  }
 }
 .main-popup .caption {
   display: table;
@@ -8608,6 +8644,14 @@ footer p {
   height: 60px;
   margin: 0 auto 10px;
 }
+@media screen and (max-width: 737px) {
+  .success_popup .logo {
+    background: url(../img/logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 @media screen and (max-width: 480px) {
   .success_popup .caption {
     font-size: 28px;
@@ -8616,12 +8660,6 @@ footer p {
   .success_popup p {
     font-size: 20px;
     margin: 20px auto 40px;
-  }
-  .success_popup .logo {
-    background: url(../img/logo.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */

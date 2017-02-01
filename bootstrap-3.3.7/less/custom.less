@@ -840,7 +840,10 @@ body{
         width: 99px;
         height: 115px;
     }
-  
+    
+    @media screen and (max-width: 1200px){ 
+        right: 12%;
+    }
     @media screen and (max-width: 1100px){ 
         bottom: -25px;
         right: 200px;
@@ -1456,7 +1459,7 @@ body{
     margin: 30px auto 0;
     position: relative;
     
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1050px){
         width: 80%;
     }
     
@@ -1513,12 +1516,20 @@ body{
         left: 4px;
     }
     
-    @media only screen and (min-width : 1200px) {
+    @media only screen and (min-width : 1346px) {
         left: -400px;
     }
     
     @media screen and (max-width: 1200px){
        left: -550px; 
+    }
+    
+    @media screen and (max-width: 1135px){
+       left: -650px; 
+    }
+    
+    @media screen and (max-width: 1050px){
+       left: -560px; 
     }
     
     @media screen and (max-width: 992px){
@@ -1610,6 +1621,9 @@ footer{
     
     .who{
         margin-top: 10px;
+        @media screen and (max-width: 992px){
+            margin-top: 15px;
+        }
     }
     p{
         margin: 0 0 3px;
@@ -1622,6 +1636,9 @@ footer{
             display: table;
             margin: auto;
         }
+        @media screen and (max-width: 992px){
+            margin-top: 15px;
+        }
     }
     
     .logo{
@@ -1630,8 +1647,8 @@ footer{
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
-            width: 204px;
-            height: 71px;
+            width: 171px;
+            height: 62px;
             margin: 15px auto 15px;
         }
     }
@@ -1681,8 +1698,13 @@ footer{
     position: fixed;
     background-color: #43747a;
     padding: 30px;
-    top: 60px;
-    left: 50px;
+    width: 377px;
+    height: 377px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
     color: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -1690,6 +1712,10 @@ footer{
     border-bottom-right-radius: 0;
     display: none;
     
+    @media screen and (max-width: @screen-phone){ 
+        width: 300px;
+        height: 300px;
+    }
     .caption{
         display: table;
         font-size: 24px;
@@ -1740,7 +1766,6 @@ footer{
 }
 
 .success_popup{
-    
     .caption{
         font-size: 36px;
         margin: 20px auto;
@@ -1757,6 +1782,14 @@ footer{
         margin: 0 auto 10px;
     }
     
+    @media screen and (max-width: 737px){ 
+        .logo{
+            background: url(../img/logo.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
     @media screen and (max-width: @screen-phone){ 
         .caption{
             font-size: 28px;
@@ -1766,14 +1799,6 @@ footer{
         p{
             font-size: 20px;
             margin: 20px auto 40px;
-        }
-        
-        .logo{
-            background: url(../img/logo.png);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    
+        }  
     }
 }

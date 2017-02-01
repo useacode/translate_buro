@@ -539,17 +539,17 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-xs-12">
+                    <div class="col-sm-3 col-xs-12">
                         <div class="logo"></div>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-sm-6 col-xs-12">
                         <div class="who">
                             <p>ИП Кухарева Юлия Евгеньевна</p>
                             <p>ИНН 773381388318 ОГРНИП 314774622300721</p>
                             <p>&copy; Бюро переводов «Свой переводчик» 2016</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-12">
+                    <div class="col-sm-3 col-xs-12">
                         <div class="call">
                             <div class="number mobile-hide">
                                 <a href="tel:8800800800"><nobr>8-800 XXX-XX-XX</nobr></a>
@@ -593,6 +593,10 @@
    
    <script>
         $(document).ready(function(){
+            $(".wrapper").scrollbar();
+            if($("#first").height() < $(window).height()){
+                $("#first").height($(window).height());
+            }
             
             var slider = $(".bxslider").bxSlider({
             controls: true,
@@ -604,6 +608,24 @@
             auto: false,
             });
         })
+    </script>
+    <script>
+
+        $('a[href^="#"]').on("click", function(e){
+            e.preventDefault();
+            var o = $($(this).attr("href"));
+            $(".scrollbar-dynamic").stop().animate({scrollTop:o.offset().top}, '2000', 'swing');
+        });
+
+        $("[data-popup]").on("click", function(){
+            $(".main_popup").toggle();
+        })
+
+        $("body").on("click", function(e){
+            if(!$(e.target).closest(".main_popup, [data-popup]")[0])
+                $(".main_popup").hide();
+        })
+        
     </script>
     <script>
 
