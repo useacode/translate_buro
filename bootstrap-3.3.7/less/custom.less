@@ -1508,7 +1508,7 @@ body{
     }
     
     @media screen and (max-width: 1200px){
-       left: -610px; 
+       left: -550px; 
     }
     
     @media screen and (max-width: 992px){
@@ -1577,7 +1577,7 @@ footer{
     color: #fff;
     padding: 20px 0;
     
-    @media screen and (max-width: @screen-phone){ 
+    @media screen and (max-width: 768px){ 
         
         .row {
             display: flex;
@@ -1604,7 +1604,7 @@ footer{
     }
     
     .call{
-        @media (max-width: 767px){
+        @media (max-width: 768px){
             display: table;
             margin: auto;
         }
@@ -1618,7 +1618,7 @@ footer{
             background-size: cover;
             width: 204px;
             height: 71px;
-            margin: 0 auto 15px;
+            margin: 15px auto 15px;
         }
     }
 
@@ -1631,8 +1631,110 @@ footer{
     .enroll{
         @media screen and (max-width: @screen-phone){
             display: block;
-            margin-bottom: 15px;
             font-size: 18px;
         }
+    }
+}
+
+.totop{
+    position:fixed;
+    right:35px;
+    bottom:6%;
+    
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    
+    @media screen and (max-width: 768px){ 
+        img{
+            width: 70px;
+            height: 70px;
+        }
+    }
+    
+    @media screen and (max-width: @screen-phone){ 
+        right:15px;
+        
+        img{
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+
+.main-popup{
+    position: fixed;
+    background-color: #43747a;
+    padding: 30px;
+    top: 60px;
+    left: 100px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: none;
+    
+    .caption{
+        display: table;
+        font-size: 24px;
+        margin: 0 auto 10px;
+    }
+    
+    .separate-line{
+        margin-bottom: 10px;
+    }
+    
+    p{
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .button_close{
+        position: absolute;
+        right: 7px;
+        top: -7px;
+        font-size: 30px;
+        opacity: 0.5;
+        
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+            
+        }
+    }
+    
+    input{
+        width: 305px;
+        margin: 20px auto;
+    }
+    
+    .btn-get{
+        display: table;
+        width: 305px;
+        margin: auto;
+    }
+    
+    
+}
+
+.success_popup{
+    
+    .caption{
+        font-size: 36px;
+        margin: 20px auto;
+    }
+    
+    p{
+        font-size: 24px;
+        margin: 25px auto 60px;
+    }
+    
+    .logo{
+        width: 160px;
+        height: 60px;
+        margin: 0 auto 10px;
     }
 }

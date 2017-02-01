@@ -560,6 +560,28 @@
                 </div>
             </div>
         </footer>
+        <a href="#first" class="totop" onClick="scroll(0,0); return false" title="Наверх">
+            <img src="assets/img/totop.png">
+        </a>
+        <div class="main-popup main-form">
+            <div class="button_close" data-popup>х</div>
+            <div class="caption">
+                Заполните форму
+            </div>
+            <div class="separate-line"></div>
+            <p>и мы Вам перезвоним</p>
+            <input type="text" class="form-control" id="inputName" placeholder="Ваше имя*">
+            <input type="text" class="form-control" id="inputPhone" placeholder="Телефон*">
+            <div class="btn btn-get">Жду звонка!</div>
+            <a href="" class="politics">Политика конфиденциальности</a>
+        </div>
+        <div class="success_popup main-popup">
+            <div class="button_close" data-popup>x</div>
+            <div class="caption">Спасибо!</div>
+            <div class="separate-line"></div>
+            <p>Мы перезвоним Вам<br> в самое ближайшее время</p>
+            <div class="logo"></div>
+        </div>
     </div>
    
     <script>
@@ -581,22 +603,6 @@
         })
     </script>
     <script>
-	   $(function(){
-           
-        $(window).on("scroll", function(){
-            $(".navbar-collapse.in").removeClass("in");
-        });
-
-        $("body > *").on("click", function(e){
-
-            if(!$(e.target).closest(".navbar-collapse")[0]){
-                $(".navbar-collapse.in").removeClass("in");
-            }
-
-        });
-	});
-    </script>
-    <script>
 
         $('a[href^="#"]').on("click", function(e){
             e.preventDefault();
@@ -608,27 +614,101 @@
             $(".main_popup").toggle();
         })
 
-        $(".main-questions__left .main-questions__img, .main-questions__left .caption, .main-questions__left .description").on("click", function(e){
-            $(".main-questions__left").addClass("hover");
-        })
-
-        $(".main-questions__left .main-questions__popup .button_close").on("click", function(){
-            $(".main-questions__left").removeClass("hover");
-        })
-
-        $(".main-questions__right .main-questions__img, .main-questions__right .caption, .main-questions__right .description").on("click", function(e){
-            $(".main-questions__right").addClass("hover");
-        })
-
-        $(".main-questions__right .main-questions__popup .button_close").on("click", function(){
-            $(".main-questions__right").removeClass("hover");
-        })
-
         $("body").on("click", function(e){
             if(!$(e.target).closest(".main_popup, [data-popup]")[0])
                 $(".main_popup").hide();
         })
         
+    </script>
+    <script>
+
+	$(function(){
+
+
+        $("[data-popup]").on("touchstart", function(e){
+            e.stopPropagation();
+            e.preventDefault();
+            setTimeout(function(){
+                $(".main_popup").toggle();
+            });
+        });
+
+        $("[data-popup-success]").on("touchstart", function(e){
+            e.stopPropagation();
+            e.preventDefault();
+            setTimeout(function(){
+                $(".success_popup").hide();
+            });
+        });
+
+        $("[data-send]").on("touchstart", function(e){
+            var succ = true;
+            if($("#inputName").val().length < 2) {
+                $(".error--name").text("Имя должно быть не менее 2х букв");
+                succ = false;
+            }
+            else{
+                $(".error--name").text("");
+            }
+            if(!$("#inputPhone").val()) {
+                $(".error--phone").text("Введите номер телефона");
+                succ = false;
+            }
+            else if($("#inputPhone").val().length < 7) {
+                $(".error--phone").text("Номер телефона должен быть не менее 7 цифр");
+                succ = false;
+            }
+            else if(!/[\d\(\)+-]{7,16}/.test($("#inputPhone").val())) {
+                $(".error--phone").text("Используйте цифры");
+                succ = false;
+            }
+            else{
+                $(".error--phone").text("");
+            }
+            if(succ) {
+                $.post("/api/order", {
+                    date: localStorage.selected || "",
+                    name: $("#inputName").val(),
+                    phone: $("#inputPhone").val()
+                }, function(data){
+                    if(data == "1"){
+                        $(".main_popup").hide();
+                        $(".success_popup").show();
+                        $("#inputName, #inputPhone").val('');
+                        $(".error").text("");
+
+                        setTimeout(function(){
+                            $(".success_popup").hide();
+                        }, 2300);
+                    }
+                    else{
+                        $(".error").text("");
+                        $(".error--name").text("Ошибка");
+                    }
+                })
+                
+            }
+        });
+
+        $("body").on("touchstart", function(e){
+            if($(".main_popup").css("display") != "none" && !$(e.target).closest(".main_popup, [data-popup], [data-send]")[0])
+                $(".main_popup").hide();
+            if($(".success_popup").css("display") != "none" && !$(e.target).closest(".success_popup, [data-popup-success], [data-send]")[0])
+                $(".success_popup").hide();
+        })
+
+        $(window).on("scroll", function(){
+            $(".navbar-collapse.in").removeClass("in");
+        });
+
+        $("body > *").on("touchstart", function(e){
+            
+            if(!$(e.target).closest(".navbar-collapse, .navbar-toggle")[0]){
+                $(".navbar-collapse.in").removeClass("in");
+            }
+
+        });
+	});
     </script>
 </body>
 </html>

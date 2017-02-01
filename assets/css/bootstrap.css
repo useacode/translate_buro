@@ -8385,7 +8385,7 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .get-free-bottom {
-    left: -610px;
+    left: -550px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -8450,7 +8450,7 @@ footer {
   color: #fff;
   padding: 20px 0;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   footer .row {
     display: flex;
     flex-direction: column;
@@ -8473,7 +8473,7 @@ footer p {
   font-size: 14px;
   text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer .call {
     display: table;
     margin: auto;
@@ -8487,7 +8487,7 @@ footer p {
     background-size: cover;
     width: 204px;
     height: 71px;
-    margin: 0 auto 15px;
+    margin: 15px auto 15px;
   }
 }
 @media (max-width: 480px) {
@@ -8498,8 +8498,90 @@ footer p {
 @media screen and (max-width: 480px) {
   footer .enroll {
     display: block;
-    margin-bottom: 15px;
     font-size: 18px;
   }
+}
+.totop {
+  position: fixed;
+  right: 35px;
+  bottom: 6%;
+}
+.totop img {
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 768px) {
+  .totop img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .totop {
+    right: 15px;
+  }
+  .totop img {
+    width: 45px;
+    height: 45px;
+  }
+}
+.main-popup {
+  position: fixed;
+  background-color: #43747a;
+  padding: 30px;
+  top: 60px;
+  left: 100px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  display: none;
+}
+.main-popup .caption {
+  display: table;
+  font-size: 24px;
+  margin: 0 auto 10px;
+}
+.main-popup .separate-line {
+  margin-bottom: 10px;
+}
+.main-popup p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.main-popup .button_close {
+  position: absolute;
+  right: 7px;
+  top: -7px;
+  font-size: 30px;
+  opacity: 0.5;
+}
+.main-popup .button_close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.main-popup input {
+  width: 305px;
+  margin: 20px auto;
+}
+.main-popup .btn-get {
+  display: table;
+  width: 305px;
+  margin: auto;
+}
+.success_popup .caption {
+  font-size: 36px;
+  margin: 20px auto;
+}
+.success_popup p {
+  font-size: 24px;
+  margin: 25px auto 60px;
+}
+.success_popup .logo {
+  width: 160px;
+  height: 60px;
+  margin: 0 auto 10px;
 }
 /*# sourceMappingURL=bootstrap.css.map */
