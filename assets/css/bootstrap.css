@@ -7711,6 +7711,9 @@ body {
     padding-bottom: 50px;
   }
 }
+.time-wrap {
+  position: relative;
+}
 .time-block {
   display: table;
   margin: auto;
@@ -7766,21 +7769,16 @@ body {
 .clock {
   float: right;
   position: absolute;
-  bottom: 30px;
-  right: 20%;
+  bottom: -50px;
+  right: 15%;
 }
 .clock img {
   width: 99px;
   height: 115px;
 }
-@media screen and (max-width: 1200px) {
-  .clock {
-    right: 200px;
-  }
-}
 @media screen and (max-width: 1100px) {
   .clock {
-    bottom: 55px;
+    bottom: -25px;
     right: 200px;
   }
   .clock img {
@@ -8393,6 +8391,11 @@ body {
   top: 16px;
   left: 4px;
 }
+@media only screen and (min-width: 1200px) {
+  .get-free-bottom {
+    left: -400px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .get-free-bottom {
     left: -550px;
@@ -8435,6 +8438,11 @@ body {
   position: absolute;
   left: -90px;
   top: -9px;
+}
+@media only screen and (min-width: 1200px) {
+  .contacts-list {
+    margin: 10% auto 0;
+  }
 }
 @media screen and (max-width: 992px) {
   .contacts-list {
