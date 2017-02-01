@@ -573,9 +573,7 @@
                 <div class="separate-line"></div>
                 <p>и мы Вам перезвоним</p>
                 <input type="text" class="form-control" id="inputName" placeholder="Ваше имя*">
-                <div class="error error--name"></div>
                 <input type="text" class="form-control" id="inputPhone" placeholder="Телефон*">
-                <div class="error error--phone"></div>
                 <div class="btn btn-get" data-send>Жду звонка!</div>
                 <a href="javascript:PolicyShow()" class="politics">Политика конфиденциальности</a>
            </div>
@@ -703,7 +701,8 @@
                 $(".main-popup.main-form").hide();
                 $(".success_popup").show();
                 $("#inputName, #inputPhone").val('');
-                $(".error").text("");
+                $("#inputName").attr("placeholder", "Ваше имя*");
+                $("#inputPhone").attr("placeholder", "Телефон*");
                 
             }
         });
