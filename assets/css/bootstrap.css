@@ -8516,6 +8516,11 @@ footer .who {
     margin-top: 23px;
   }
 }
+@media screen and (max-width: 480px) {
+  footer .who {
+    margin-top: 10px;
+  }
+}
 footer p {
   margin: 0 0 3px;
   font-size: 14px;
