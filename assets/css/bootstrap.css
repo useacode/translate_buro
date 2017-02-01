@@ -7259,10 +7259,10 @@ body {
 @media screen and (max-width: 526px) {
   .main-caption {
     background: none;
-    border: none;
+    border: 1px solid white;
     text-align: center;
     margin: 20px 0 0;
-    padding: 0;
+    padding: 0 10px;
     text-transform: inherit;
   }
   .main-caption h1 {
@@ -7282,9 +7282,14 @@ body {
   max-width: 1018px;
   margin: 60px auto 50px;
 }
+@media screen and (max-width: 667px) {
+  .advantages-block {
+    margin: 0 auto 10px;
+  }
+}
 @media screen and (max-width: 526px) {
   .advantages-block {
-    margin: 20px auto 10px;
+    margin: 30px auto 10px;
   }
 }
 .advantages-list li {
@@ -7331,6 +7336,11 @@ body {
     float: none;
     display: table;
     margin: 25px auto 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form-wrapper {
+    margin: 15px auto 0;
   }
 }
 .separate-line {
