@@ -678,26 +678,26 @@
         $("[data-send]").on("click", function(e){
             var succ = true;
             if($("#inputName").val().length < 2) {
-                $(".error--name").text("Имя должно быть не менее 2х букв");
+                $("#inputName").attr("placeholder", "Имя должно быть не менее 2х букв");
                 succ = false;
             }
             else{
-                $(".error--name").text("");
+                $("#inputName").attr("placeholder", "Ваше имя*");
             }
             if(!$("#inputPhone").val()) {
-                $(".error--phone").text("Введите номер телефона");
+                $("#inputPhone").attr("placeholder", "Введите номер телефона");
                 succ = false;
             }
             else if($("#inputPhone").val().length < 7) {
-                $(".error--phone").text("Номер телефона должен быть не менее 7 цифр");
+                $("#inputPhone").attr("placeholder", "Номер телефона должен быть не менее 7 цифр");
                 succ = false;
             }
             else if(!/[\d\(\)+-]{7,16}/.test($("#inputPhone").val())) {
-                $(".error--phone").text("Используйте цифры");
+                $("#inputPhone").attr("placeholder", "Используйте цифры");
                 succ = false;
             }
             else{
-                $(".error--phone").text("");
+                 $("#inputPhone").attr("placeholder", "Телефон*");
             }
             if(succ) {
                 $(".main-popup.main-form").hide();
