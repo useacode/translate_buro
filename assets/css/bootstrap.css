@@ -7720,6 +7720,11 @@ body {
   border: 2px solid white;
   padding: 0 50px 30px;
 }
+@media screen and (max-width: 550px) {
+  .time-block {
+    padding: 0 30px 30px;
+  }
+}
 @media screen and (max-width: 480px) {
   .time-block {
     border: none;
@@ -7793,7 +7798,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .clock {
-    bottom: 26px;
+    bottom: 0px;
     right: 30px;
   }
 }
@@ -8499,17 +8504,25 @@ footer {
   }
 }
 footer .who {
-  margin-top: 10px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 1200px) {
+  footer .who {
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 992px) {
   footer .who {
-    margin-top: 15px;
+    margin-top: 23px;
   }
 }
 footer p {
   margin: 0 0 3px;
   font-size: 14px;
   text-align: center;
+}
+footer .call {
+  margin-top: 5px;
 }
 @media (max-width: 768px) {
   footer .call {
@@ -8519,7 +8532,12 @@ footer p {
 }
 @media screen and (max-width: 992px) {
   footer .call {
-    margin-top: 15px;
+    margin-top: 23px;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer .call {
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -8569,64 +8587,68 @@ footer p {
   }
 }
 .main-popup {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
   position: fixed;
+  top: 0px;
+  display: none;
+}
+.popup-content {
+  position: relative;
   background-color: #43747a;
   padding: 30px;
   width: 377px;
   height: 377px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: auto;
+  margin: 10% auto;
   color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  display: none;
 }
 @media screen and (max-width: 480px) {
-  .main-popup {
+  .popup-content {
     width: 300px;
     height: 300px;
   }
 }
-.main-popup .caption {
+.popup-content .caption {
   display: table;
   font-size: 24px;
   margin: 0 auto 10px;
   text-align: center;
 }
 @media screen and (max-width: 480px) {
-  .main-popup .caption {
+  .popup-content .caption {
     font-size: 22px;
   }
 }
-.main-popup .separate-line {
+.popup-content .separate-line {
   margin-bottom: 10px;
 }
-.main-popup p {
+.popup-content p {
   text-align: center;
   font-size: 16px;
   margin-bottom: 15px;
 }
-.main-popup .button_close {
+.popup-content .button_close {
   position: absolute;
-  right: 7px;
-  top: -7px;
+  right: 15px;
+  top: 0px;
   font-size: 30px;
   opacity: 0.5;
 }
-.main-popup .button_close:hover {
+.popup-content .button_close:hover {
   opacity: 1;
   cursor: pointer;
 }
-.main-popup input {
+.popup-content input {
   width: 96%;
   margin: 20px auto;
 }
-.main-popup .btn-get {
+.popup-content .btn-get {
   display: table;
   width: 96%;
   margin: auto;
@@ -8661,5 +8683,51 @@ footer p {
     font-size: 20px;
     margin: 20px auto 40px;
   }
+}
+.politics_popup {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+}
+.politics_popup .politics_content {
+  position: relative;
+  padding: 30px;
+  width: 450px;
+  height: 400px;
+  margin: 10% auto;
+  overflow: auto;
+  background-color: #fff;
+  color: #000;
+}
+@media only screen and (min-width: 1200px) {
+  .politics_popup .politics_content {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .politics_popup .politics_content {
+    width: 300px;
+    height: 350px;
+  }
+}
+.politics_popup .caption {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.politics_popup .button_close {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  font-size: 30px;
+  opacity: 0.5;
+}
+.politics_popup .button_close:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 /*# sourceMappingURL=bootstrap.css.map */

@@ -74,7 +74,7 @@
                                     <img src="assets/img/check-box.png" alt="">
                                     <p>Стоимость перевода от 450 руб.</p></li>
                                 <li><img src="assets/img/check-box.png" alt="">
-                                    <p>Выполняем срочные заказы от 1 часа</p></li>
+                                    <p>Срочные заказы от 1 часа</p></li>
                                 <li class="mobile-hide">
                                     <img src="assets/img/check-box.png" alt="">
                                     <p>Вы можете заказать и оплатить перевод онлайн</p></li>
@@ -99,7 +99,7 @@
                                        <p>прикрепите документ для перевода</p>
                                     </div>
                                     <div class="btn btn-get">Получить перевод</div>
-                                    <a href="" class="politics">Политика конфиденциальности</a>
+                                    <a href="javascript:PolicyShow()" class="politics">Политика конфиденциальности</a>
                                 </div>
                            </div>
                         </div>
@@ -108,7 +108,7 @@
                 <div class="main-bottom">
                     <div class="scroll-cell">
                        <div class="scroll">
-                           <span class="mouse"></span>
+                           <a href="#price"><span class="mouse"></span></a>
                        </div>       
                     </div>
                 </div>
@@ -183,7 +183,7 @@
             </div>
             <div class="cont-place">
 				<div id="publitas-embed-2etc554gx2k3ma0o30049rudi"></div>
-                <script publitas-embed="" data-wrapperid="publitas-embed-2etc554gx2k3ma0o30049rudi" data-cfasync="false" data-publication="https://view.publitas.com/spasibo-shop/itogi-spasibo-2015/" data-responsive="true" type="text/javascript" src="https://view.publitas.com/embed.js"></script>
+                <script publitas-embed="" data-wrapperid="publitas-embed-2etc554gx2k3ma0o30049rudi" data-cfasync="false" data-publication="https://view.publitas.com/perevodo/prais-svoi-perevodchik" data-responsive="true" type="text/javascript" src="https://view.publitas.com/embed.js"></script>
             </div>
         </section>
         <section class="what">
@@ -342,7 +342,7 @@
                                        <p>прикрепите документ для перевода</p>
                                     </div>
                                     <div class="btn btn-get">Получить перевод</div>
-                                    <a href="" class="politics">Политика конфиденциальности</a>
+                                    <a href="javascript:PolicyShow()" class="politics">Политика конфиденциальности</a>
                                 </div>
                            </div>
                         </div>
@@ -525,7 +525,7 @@
                                    <p>прикрепите документ для перевода</p>
                                 </div>
                                 <div class="btn btn-get">Получить перевод</div>
-                                <a href="" class="politics">Политика конфиденциальности</a>
+                                <a href="javascript:PolicyShow()" class="politics">Политика конфиденциальности</a>
                             </div>
                        </div>
                     </div>
@@ -564,30 +564,48 @@
             <img src="assets/img/totop.png">
         </a>
         <div class="main-popup main-form">
-            <style scoped>
-                .error{
-                    color: red;
-                }
-            </style>
-            <div class="button_close" data-popup>х</div>
-            <div class="caption">
-                Заполните форму
-            </div>
-            <div class="separate-line"></div>
-            <p>и мы Вам перезвоним</p>
-            <input type="text" class="form-control" id="inputName" placeholder="Ваше имя*">
-            <div class="error error--name"></div>
-            <input type="text" class="form-control" id="inputPhone" placeholder="Телефон*">
-            <div class="error error--phone"></div>
-            <div class="btn btn-get" data-send>Жду звонка!</div>
-            <a href="" class="politics">Политика конфиденциальности</a>
+           <div class="popup-content">
+                <style scoped>
+                    .error{
+                        color: red;
+                    }
+                </style>
+                <div class="button_close" data-popup>х</div>
+                <div class="caption">
+                    Заполните форму
+                </div>
+                <div class="separate-line"></div>
+                <p>и мы Вам перезвоним</p>
+                <input type="text" class="form-control" id="inputName" placeholder="Ваше имя*">
+                <div class="error error--name"></div>
+                <input type="text" class="form-control" id="inputPhone" placeholder="Телефон*">
+                <div class="error error--phone"></div>
+                <div class="btn btn-get" data-send>Жду звонка!</div>
+                <a href="javascript:PolicyShow()" class="politics">Политика конфиденциальности</a>
+           </div>
         </div>
         <div class="success_popup main-popup">
-            <div class="button_close" data-popup-success>x</div>
-            <div class="caption">Спасибо!</div>
-            <div class="separate-line"></div>
-            <p>Мы перезвоним Вам<br> в самое ближайшее время</p>
-            <div class="logo"></div>
+           <div class="popup-content">
+                <div class="button_close" data-popup-success>x</div>
+                <div class="caption">Спасибо!</div>
+                <div class="separate-line"></div>
+                <p>Мы перезвоним Вам<br> в самое ближайшее время</p>
+                <div class="logo"></div>
+           </div>
+        </div>
+        <div class="politics_popup">
+           <div class="politics_content">
+                <div class="button_close" data-policy-success>x</div>
+                <div class="caption">Политика конфиденциальности</div>
+                <div class="text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+
+                    </p>
+                </div>
+           </div>
         </div>
     </div>
    
@@ -626,12 +644,13 @@
                 $(".main_popup").hide();
         })
         
+        function PolicyShow(){
+            $(".politics_popup").show();
+        }
+        
     </script>
     <script>
-
-
 	$(function(){
-
 
         $("[data-popup]").on("click", function(e){
             e.stopPropagation();
@@ -646,6 +665,14 @@
             e.preventDefault();
             setTimeout(function(){
                 $(".main-popup.success_popup").hide();
+            });
+        });
+        
+        $("[data-policy-success]").on("click", function(e){
+            e.stopPropagation();
+            e.preventDefault();
+            setTimeout(function(){
+                $(".politics_popup").hide();
             });
         });
 
@@ -674,26 +701,10 @@
                 $(".error--phone").text("");
             }
             if(succ) {
-                /*$.post("/api/order", {
-                    date: localStorage.selected || "",
-                    name: $("#inputName").val(),
-                    phone: $("#inputPhone").val()
-                }, function(data){
-                    if(data == "1"){*/
-                        $(".main-popup.main-form").hide();
-                        $(".success_popup").show();
-                        $("#inputName, #inputPhone").val('');
-                        $(".error").text("");
-
-                        setTimeout(function(){
-                            $(".success_popup").hide();
-                        }, 2300);
-                    /*}
-                    else{
-                        $(".error").text("");
-                        $(".error--name").text("Ошибка");
-                    }
-                })*/
+                $(".main-popup.main-form").hide();
+                $(".success_popup").show();
+                $("#inputName, #inputPhone").val('');
+                $(".error").text("");
                 
             }
         });

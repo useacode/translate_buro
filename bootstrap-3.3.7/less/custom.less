@@ -782,6 +782,9 @@ body{
     border: 2px solid white;
     padding: 0 50px 30px;
     
+    @media screen and (max-width: 550px){ 
+        padding: 0 30px 30px;
+    }
     @media screen and (max-width: @screen-phone){ 
         border: none;
         padding: 0 0 30px;
@@ -855,7 +858,7 @@ body{
     }
     
     @media screen and (max-width: @screen-phone){ 
-        bottom: 26px;
+        bottom: 0px;
         right: 30px;
     }
 }
@@ -1620,9 +1623,13 @@ footer{
     }
     
     .who{
-        margin-top: 10px;
+        margin-top: 15px;
+        
+        @media screen and (max-width: 1200px){
+            margin-top: 10px;
+        }
         @media screen and (max-width: 992px){
-            margin-top: 15px;
+            margin-top: 23px;
         }
     }
     p{
@@ -1632,12 +1639,17 @@ footer{
     }
     
     .call{
+        margin-top: 5px;
+        
         @media (max-width: 768px){
             display: table;
             margin: auto;
         }
         @media screen and (max-width: 992px){
-            margin-top: 15px;
+            margin-top: 23px;
+        }
+        @media screen and (max-width: @screen-phone){
+            margin-top: 10px;
         }
     }
     
@@ -1695,22 +1707,26 @@ footer{
 }
 
 .main-popup{
-    position: fixed;
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.6);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    display: none;
+}
+.popup-content{
+    position: relative;
     background-color: #43747a;
     padding: 30px;
     width: 377px;
     height: 377px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
+    margin: 10% auto;
     color: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    display: none;
     
     @media screen and (max-width: @screen-phone){ 
         width: 300px;
@@ -1739,8 +1755,8 @@ footer{
     
     .button_close{
         position: absolute;
-        right: 7px;
-        top: -7px;
+        right: 15px;
+        top: 0px;
         font-size: 30px;
         opacity: 0.5;
         
@@ -1800,5 +1816,54 @@ footer{
             font-size: 20px;
             margin: 20px auto 40px;
         }  
+    }
+}
+
+.politics_popup{
+    display: none;
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.6);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    
+    .politics_content{
+        position: relative;
+        padding: 30px;
+        width: 450px;
+        height: 400px;
+        margin: 10% auto;
+        overflow: auto;
+        background-color: #fff;
+        color: #000;
+        
+        @media only screen and (min-width : 1200px) {
+        width: 600px;
+        }
+
+        @media screen and (max-width: @screen-phone){ 
+            width: 300px;
+            height: 350px;
+        }
+    }
+    .caption{
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .button_close{
+        position: absolute;
+        right: 15px;
+        top: 0px;
+        font-size: 30px;
+        opacity: 0.5;
+        
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+            
+        }
     }
 }
