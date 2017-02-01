@@ -1675,7 +1675,7 @@ footer{
     background-color: #43747a;
     padding: 30px;
     top: 60px;
-    left: 100px;
+    left: 50px;
     color: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -1687,6 +1687,11 @@ footer{
         display: table;
         font-size: 24px;
         margin: 0 auto 10px;
+        text-align: center;
+        
+        @media screen and (max-width: @screen-phone){ 
+            font-size: 22px;
+        }
     }
     
     .separate-line{
@@ -1714,13 +1719,13 @@ footer{
     }
     
     input{
-        width: 305px;
+        width: 96%;
         margin: 20px auto;
     }
     
     .btn-get{
         display: table;
-        width: 305px;
+        width: 96%;
         margin: auto;
     }
     
@@ -1728,7 +1733,7 @@ footer{
 }
 
 .success_popup{
-    
+    display:block;
     .caption{
         font-size: 36px;
         margin: 20px auto;
@@ -1743,5 +1748,24 @@ footer{
         width: 160px;
         height: 60px;
         margin: 0 auto 10px;
+    }
+    
+    @media screen and (max-width: @screen-phone){ 
+        .caption{
+            font-size: 28px;
+            margin: 15px auto;
+        }
+
+        p{
+            font-size: 20px;
+            margin: 20px auto 40px;
+        }
+        .logo{
+            background: url(../img/logo.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
     }
 }

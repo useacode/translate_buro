@@ -8540,7 +8540,7 @@ footer p {
   background-color: #43747a;
   padding: 30px;
   top: 60px;
-  left: 100px;
+  left: 50px;
   color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -8552,6 +8552,12 @@ footer p {
   display: table;
   font-size: 24px;
   margin: 0 auto 10px;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .main-popup .caption {
+    font-size: 22px;
+  }
 }
 .main-popup .separate-line {
   margin-bottom: 10px;
@@ -8573,13 +8579,16 @@ footer p {
   cursor: pointer;
 }
 .main-popup input {
-  width: 305px;
+  width: 96%;
   margin: 20px auto;
 }
 .main-popup .btn-get {
   display: table;
-  width: 305px;
+  width: 96%;
   margin: auto;
+}
+.success_popup {
+  display: block;
 }
 .success_popup .caption {
   font-size: 36px;
@@ -8593,5 +8602,21 @@ footer p {
   width: 160px;
   height: 60px;
   margin: 0 auto 10px;
+}
+@media screen and (max-width: 480px) {
+  .success_popup .caption {
+    font-size: 28px;
+    margin: 15px auto;
+  }
+  .success_popup p {
+    font-size: 20px;
+    margin: 20px auto 40px;
+  }
+  .success_popup .logo {
+    background: url(../img/logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 /*# sourceMappingURL=bootstrap.css.map */
