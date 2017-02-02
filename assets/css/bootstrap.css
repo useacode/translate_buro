@@ -7036,6 +7036,9 @@ body {
     height: 59px;
   }
 }
+.top-menu {
+  margin-top: 20px;
+}
 .top-menu ul {
   line-height: 45px;
   display: block;
@@ -7069,6 +7072,7 @@ body {
 }
 @media (max-width: 767px) {
   .top-menu {
+    margin-top: 0;
     float: right;
   }
 }
@@ -7659,7 +7663,7 @@ body {
   width: 100px;
 }
 .what-item .name {
-  font-size: 24px;
+  font-size: 22px;
   margin: 10px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -8180,7 +8184,7 @@ body {
   .company-block {
     border: none;
     padding: 0;
-    margin: 0;
+    margin: -10px 0 -30px;
   }
 }
 .company-caption {
@@ -8277,7 +8281,6 @@ body {
 }
 @media screen and (max-width: 480px) {
   .facts {
-    margin-top: -30px;
     margin-bottom: 20px;
   }
 }
@@ -8342,7 +8345,7 @@ body {
   }
 }
 .contacts-block {
-  width: 70%;
+  width: 95%;
   margin: 30px auto 0;
   position: relative;
 }
@@ -8394,7 +8397,7 @@ body {
 }
 .get-free-bottom {
   position: absolute;
-  left: -524px;
+  left: -300px;
   bottom: 40px;
 }
 .get-free-bottom:after {
@@ -8403,24 +8406,14 @@ body {
   top: 16px;
   left: 4px;
 }
-@media only screen and (min-width: 1346px) {
-  .get-free-bottom {
-    left: -400px;
-  }
-}
 @media screen and (max-width: 1200px) {
   .get-free-bottom {
-    left: -550px;
-  }
-}
-@media screen and (max-width: 1135px) {
-  .get-free-bottom {
-    left: -650px;
+    left: -500px;
   }
 }
 @media screen and (max-width: 1050px) {
   .get-free-bottom {
-    left: -560px;
+    left: -600px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -8515,7 +8508,7 @@ footer .who {
 }
 @media screen and (max-width: 992px) {
   footer .who {
-    margin-top: 23px;
+    margin-top: 15px;
   }
 }
 @media screen and (max-width: 480px) {
